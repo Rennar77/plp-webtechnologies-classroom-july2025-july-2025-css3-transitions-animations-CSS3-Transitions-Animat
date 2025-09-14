@@ -1,0 +1,67 @@
+/* Part 1: CSS3 Transitions & Animations */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  /* Button hover transition */
+  button:hover {
+    background: #007BFF;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Animated Box */
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background: crimson;
+    border-radius: 8px;
+    transition: transform 0.5s ease, background 0.5s ease;
+  }
+  
+  /* CSS Keyframes Animation */
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Class applied dynamically with JS */
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Popup Modal */
+  .popup {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 10;
+  }
+  
+  /* Active state for popup */
+  .popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
